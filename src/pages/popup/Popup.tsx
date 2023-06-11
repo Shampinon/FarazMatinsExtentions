@@ -1,26 +1,29 @@
 import React from "react";
-import logo from "@assets/img/logo.svg";
-import "@pages/popup/Popup.css";
+import { Container } from "@mui/material";
+import { TabView, TabProp } from "./components/tab-view";
+import { Home } from "./modules/home";
+import { Logs } from "./modules/logs";
+import { AuthUser } from "./components/auth-user";
 
-const Popup = () => {
+const tabs: TabProp[] = [
+  {
+    id: "home",
+    label: "Home",
+    content: <Home />,
+  },
+  {
+    id: "logs",
+    label: "Logs",
+    content: <Logs />,
+  },
+];
+
+export const Popup = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/pages/popup/Popup.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React!
-        </a>
-      </header>
-    </div>
+    <Container sx={{ pb: 2 }}>
+      <AuthUser>
+        <TabView tabs={tabs} defaultTab="home" />
+      </AuthUser>
+    </Container>
   );
 };
-
-export default Popup;

@@ -1,5 +1,5 @@
 {
-  "name": "chrome-extension-boilerplate-react-vite",
+  "name": "faraz-s-extension",
   "version": "0.0.1",
   "description": "chrome extension boilerplate",
   "license": "MIT",
@@ -17,8 +17,16 @@
   },
   "type": "module",
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.3",
+    "@mui/material": "^5.13.4",
+    "@mui/x-data-grid": "^6.7.0",
+    "formik": "^2.4.1",
+    "moment": "^2.29.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.5.0",
